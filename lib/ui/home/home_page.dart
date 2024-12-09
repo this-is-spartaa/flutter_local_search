@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_local_search/core/geolocator_helper.dart';
 import 'package:flutter_local_search/ui/detail/detail_page.dart';
 import 'package:flutter_local_search/ui/home/home_view_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -15,6 +16,24 @@ class HomePage extends StatelessWidget {
         },
         child: Scaffold(
           appBar: AppBar(
+            actions: [
+              GestureDetector(
+                onTap: () async {
+                  final position = await GeolocatorHelper.getPosition();
+                  if (position != null) {
+                    viewModel.searchByLatLng(
+                        position.latitude, position.longitude);
+                  }
+                },
+                child: Container(
+                  width: 50,
+                  height: 50,
+                  color: Colors.transparent,
+                  alignment: Alignment.center,
+                  child: Icon(Icons.gps_fixed),
+                ),
+              )
+            ],
             title: TextField(
               maxLines: 1,
               onSubmitted: (value) {
