@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_local_search/ui/detail/detail_page.dart';
 import 'package:flutter_local_search/ui/home/home_view_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -46,7 +47,16 @@ class HomePage extends StatelessWidget {
               final location = homeState.locations[index];
               return GestureDetector(
                 onTap: () {
-                  // TODO DetailPage
+                  if (location.link.startsWith('https')) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return DetailPage(link: location.link);
+                        },
+                      ),
+                    );
+                  }
                 },
                 child: Container(
                   decoration: BoxDecoration(
