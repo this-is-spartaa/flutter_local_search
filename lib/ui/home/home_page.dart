@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_local_search/core/geolocator_helper.dart';
-import 'package:flutter_local_search/ui/detail/detail_page.dart';
+import 'package:flutter_local_search/ui/review/review_page.dart';
 import 'package:flutter_local_search/ui/home/home_view_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -71,7 +71,7 @@ class HomePage extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          return DetailPage(link: location.link);
+                          return ReviewPage(location: location);
                         },
                       ),
                     );
