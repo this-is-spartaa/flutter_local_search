@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "492876075295",
+    "project_id": "flutter-location-search-28a79",
+    "storage_bucket": "flutter-location-search-28a79.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492876075295:android:a9fc643e378b5cf770602a",
+        "android_client_info": {
+          "package_name": "com.example.flutter_local_search"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuMEgBRicCViQ2pe-63JrSVR7rUP0xZHA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -11,7 +11,8 @@ class ReviewState {
 class ReviewViewModel extends AutoDisposeFamilyNotifier<ReviewState, Location> {
   @override
   ReviewState build(Location arg) {
-    return ReviewState(reviews: []);
+    getAllReviews();
+    return ReviewState(reviews: null);
   }
 
   final reviewRepository = const ReviewRepository();
