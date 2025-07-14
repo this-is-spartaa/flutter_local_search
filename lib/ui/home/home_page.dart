@@ -41,7 +41,7 @@ class HomePage extends StatelessWidget {
               },
               decoration: InputDecoration(
                 hintText: '검색어를 입력해 주세요',
-                border: MaterialStateOutlineInputBorder.resolveWith(
+                border: WidgetStateInputBorder.resolveWith(
                   (states) {
                     if (states.contains(WidgetState.focused)) {
                       return OutlineInputBorder(
